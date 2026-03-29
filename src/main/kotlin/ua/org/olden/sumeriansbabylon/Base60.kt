@@ -162,7 +162,7 @@ class Base60 private constructor(
         val negative = numerator.signum() < 0
         val absNum = numerator.abs()
         val intPart = absNum.divide(denominator)
-        var remainder = absNum.remainder(denominator)
+        val remainder = absNum.remainder(denominator)
 
         val sb = StringBuilder()
         sb.append(toBase60IntegerDigitsFor(intPart).joinToString(":"))
